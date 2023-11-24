@@ -1,0 +1,10 @@
+SpringBootApplication: É uma anotação que serve para indicar que é a classe de inicialização do SpringBoot
+@RestController: Ele é um controlador que irá retornar os dados formatados.
+RequestMapping: Ele irá definir a rota que o controlador irá utilizar 
+GetMapping:  Serve para lidar com solicitações de GET de um controlador
+PutMapping: Ele serve para atualizar os dados atravez do método PUT
+PostMapping: Definirá o método para criar novos itens
+DeleteMapping: Ele irá ser o responsável por lidar com os delete solicitados
+Service: Ele serve para validar regras de negócios
+Repository: Ele o local em que terá contatos diretamente com os dados, ele serve para facilitar os acessos aos dados.
+Entity: Serve para setar que um classe é uma entidade
