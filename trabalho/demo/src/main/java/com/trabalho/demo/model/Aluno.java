@@ -15,6 +15,7 @@ public class Aluno implements Serializable {
 
     private String nome;
     private String cpf;
+    private String sexo;
     @OneToMany(mappedBy = "nota", cascade = CascadeType.ALL)
     private List<Nota> notas = new ArrayList<>();
 
@@ -53,4 +54,11 @@ public class Aluno implements Serializable {
         this.notas = notas;
     }
 
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 }

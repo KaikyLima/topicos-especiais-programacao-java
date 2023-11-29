@@ -1,5 +1,6 @@
 package com.trabalho.demo.service;
 
+import com.fasterxml.jackson.annotation.OptBoolean;
 import com.trabalho.demo.model.Aluno;
 import com.trabalho.demo.repository.AlunoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class AlunoService {
     @Autowired
@@ -28,5 +31,9 @@ public class AlunoService {
 
     public List<Aluno> buscarAluno(){
         return alunoRepository.findAll();
+    }
+
+    public Optional<Aluno> buscarId(Long id) {
+        return alunoRepository.findById(id);
     }
 }
