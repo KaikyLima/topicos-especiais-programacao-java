@@ -50,7 +50,7 @@ public class CursoController {
             return ResponseEntity.status(HttpStatus.OK).body("Não localizado !");
         }
         cursoService.deletarCurso(a);
-        return ResponseEntity.status(HttpStatus.OK).body("Aluno DELETADO!");
+        return ResponseEntity.status(HttpStatus.OK).body("Curso DELETADO!");
     }
 
 }

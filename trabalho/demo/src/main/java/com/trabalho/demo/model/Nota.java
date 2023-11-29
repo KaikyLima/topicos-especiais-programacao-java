@@ -14,8 +14,9 @@ public class Nota implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "disciplina_id")
-    private com.trabalho.demo.model.Disciplina disciplina;
+    private Disciplina disciplina;
     private Double nota;
+    private String status;
 
 
 
@@ -36,5 +37,14 @@ public class Nota implements Serializable {
 
     public void setNota(Double nota) {
         this.nota = nota;
+    }
+
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

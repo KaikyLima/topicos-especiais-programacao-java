@@ -38,13 +38,7 @@ public class Disciplina {
         this.nomeDisciplina = nomeDisciplina;
     }
 
-    public Curso getCurso() {
-        return curso;
-    }
 
-    public void setCurso(Curso curso) {
-        this.curso = curso;
-    }
 
     public List<Nota> getNotas() {
         return notas;
