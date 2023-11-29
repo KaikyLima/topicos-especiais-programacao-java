@@ -45,4 +45,15 @@ public class AlunoController {
 
         return ResponseEntity.status(HttpStatus.OK).body(service.gravarAluno(aluno1));
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Object> deletarAluno (@PathVariable(value = "id") Long id){
+        Optional<Aluno> a = service.buscarId(id);
+
+        if(a == null){
+            return ResponseEntity.status(HttpStatus.OK).body("Não localizado !");
+        }
+        service.deletarAluno(a);
+        return ResponseEntity.status(HttpStatus.OK).body("Aluno DELETADO!");
+    }
 }

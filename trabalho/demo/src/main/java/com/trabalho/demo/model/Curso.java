@@ -12,6 +12,9 @@ public class Curso implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeCurso;
+
+    @JoinColumn(name = "aluno_id")
+    private Aluno aluno;
     @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL)
     private List<com.trabalho.demo.model.Disciplina> disciplinas = new ArrayList<>();
 

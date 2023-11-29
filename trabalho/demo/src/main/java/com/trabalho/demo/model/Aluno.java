@@ -16,7 +16,9 @@ public class Aluno implements Serializable {
     private String nome;
     private String cpf;
     private String sexo;
-    @OneToMany(mappedBy = "nota", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "aluno", fetch =FetchType.LAZY)
+    private List<AlunoHasCurso> alunosCursos = new ArrayList<>();
+    @OneToMany(mappedBy = "nota", fetch =FetchType.LAZY)
     private List<Nota> notas = new ArrayList<>();
 
     public Aluno() {
@@ -44,6 +46,14 @@ public class Aluno implements Serializable {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public List<AlunoHasCurso> getAlunosCursos() {
+        return alunosCursos;
+    }
+
+    public void setCursos(List<AlunoHasCurso> alunosCursos) {
+        this.alunosCursos = alunosCursos;
     }
 
     public List<Nota> getNotas() {

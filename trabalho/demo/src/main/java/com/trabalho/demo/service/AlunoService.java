@@ -36,4 +36,7 @@ public class AlunoService {
     public Optional<Aluno> buscarId(Long id) {
         return alunoRepository.findById(id);
     }
+    public void deletarAluno(Optional<Aluno>aluno){
+        alunoRepository.delete(aluno.get());
+    }
 }
