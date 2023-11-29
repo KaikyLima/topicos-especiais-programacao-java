@@ -1,7 +1,7 @@
-package com.kaiky.demo.model;
+package com.trabalho.demo.model;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class Curso implements Serializable {
     private Long id;
     private String nomeCurso;
     @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL)
-    private List<Disciplina> disciplinas = new ArrayList<>();
+    private List<com.trabalho.demo.model.Disciplina> disciplinas = new ArrayList<>();
 
     public Curso() {
     }
@@ -34,11 +34,11 @@ public class Curso implements Serializable {
         this.nomeCurso = nomeCurso;
     }
 
-    public List<Disciplina> getDisciplinas() {
+    public List<com.trabalho.demo.model.Disciplina> getDisciplinas() {
         return disciplinas;
     }
 
-    public void setDisciplinas(List<Disciplina> disciplinas) {
+    public void setDisciplinas(List<com.trabalho.demo.model.Disciplina> disciplinas) {
         this.disciplinas = disciplinas;
     }
 }

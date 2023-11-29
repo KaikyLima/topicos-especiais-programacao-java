@@ -1,7 +1,7 @@
-package com.kaiky.demo.model;
+package com.trabalho.demo.model;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
@@ -14,7 +14,7 @@ public class Nota implements Serializable {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "disciplina_id")
-    private  Disciplina disciplina;
+    private com.trabalho.demo.model.Disciplina disciplina;
     private Double nota;
 
 

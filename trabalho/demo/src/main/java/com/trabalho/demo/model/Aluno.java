@@ -1,7 +1,7 @@
-package com.kaiky.demo.model;
+package com.trabalho.demo.model;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,8 +53,4 @@ public class Aluno implements Serializable {
         this.notas = notas;
     }
 
-    public double calcularMedia() {
-        double soma = notas.stream().mapToDouble(Nota::getNota).sum();
-        return notas.isEmpty() ? 0 : soma / notas.size();
-    }
 }
